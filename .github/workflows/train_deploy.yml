@@ -30,7 +30,15 @@ jobs:
       uses: Azure/aml-compute@v1
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
-    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install  hr_attr-0.1-py3-none-any.whl
+        
+    - name: Running pipelines 
+      run: |
+       python -m hr-attr
+       
     # Submit a training run to the Azure Machine Learning
     - name: Submit training run
       id: aml_run
