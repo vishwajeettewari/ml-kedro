@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - 'code/*'
+      - '*'
 
 jobs:
   train:
@@ -37,7 +37,7 @@ jobs:
         
     - name: Running pipelines 
       run: |
-       python -m hr_attr
+        python -m hr_attr
        
 #     # Submit a training run to the Azure Machine Learning
 #     - name: Submit training run
