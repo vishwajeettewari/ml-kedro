@@ -37,7 +37,7 @@ jobs:
         
     - name: Running pipelines 
       run: |
-       python -m hr-attr
+       python -m hr_attr
        
     # Submit a training run to the Azure Machine Learning
     - name: Submit training run
